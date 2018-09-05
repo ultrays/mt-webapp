@@ -25,7 +25,8 @@
 <style lang="scss" scoped>
   header{
     height: .51rem;
-    padding: .1rem;
+    padding: .1rem ;
+    padding-right: .13rem;
     background: #06C1AE;
     font-size: .14rem;
     display: flex;
@@ -39,7 +40,7 @@
       span{
         font-size: .16rem;
         color: white;
-        margin-right: .05rem;
+        margin-right: .03rem;
       }
       img{
         width: .15rem;

@@ -45,7 +45,7 @@
 
 <script>
     export default {
-        name: "indexSwiperNav1"
+        name: "indexSwiperNav2"
     }
 </script>
 
@@ -55,7 +55,7 @@
     /*justify-content: space-around;*/
     flex-wrap: wrap;
     padding: .1rem 0rem .05rem;
-    background: pink;
+    background: lightblue;
     .item{
       width: .4rem;
       display: flex;

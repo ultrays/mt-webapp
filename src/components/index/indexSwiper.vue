@@ -1,38 +1,55 @@
 <template>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        1111
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <SwiperNav1></SwiperNav1>
+        </div>
+        <div class="swiper-slide">
+          <SwiperNav2></SwiperNav2>
+        </div>
       </div>
-      <div class="swiper-slide">
-        2222
-      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
     </div>
-  </div>
 </template>
 
 <script>
   import Swiper from "swiper/dist/js/swiper"
+  import SwiperNav1 from "./indexSwiperNav1"
+  import SwiperNav2 from "./indexSwiperNav2"
   export default {
-      name: "indexSwipper",
-      mounted(){
-        var mySwiper = new Swiper('.swiper-container', {
-          autoplay:true,
-          loop:true
-        })
-      }
+    name: "indexSwipper",
+    components:{
+      SwiperNav1,
+      SwiperNav2
+    },
+    mounted(){
+      new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination'
+        }
+      })
+    }
   }
 </script>
 
 <style lang="scss" scoped>
-  @import "swiper/dist/css/swiper.css";
   .swiper-container{
-    height: 3rem;
-    .swiper-wrapper{
-      height: 2rem;
-      .swiper-slide{
-        color: red;
-      }
-    }
+    border-bottom: 1px solid #EAE7E1;
+  }
+</style>
+<style>
+  /*引入swiper样式一定要放在scoped之外，否则会出错*/
+  @import "swiper/dist/css/swiper.css";
+  /*改变分页器样式*/
+  .swiper-pagination{
+  }
+  .swiper-pagination-bullet{
+    background: #F0EFED;
+  }
+  .swiper-pagination-bullet-active{
+    background: #06C1AE;
   }
 </style>
