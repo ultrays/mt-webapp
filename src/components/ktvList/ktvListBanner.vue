@@ -1,12 +1,12 @@
 <template>
   <div>
-    <img src="../../assets/yuan/img/index/banner.png" alt=""/>
+    <img src="../../assets/yuan/img/ktvList/banner.png" alt=""/>
   </div>
 </template>
 
 <script>
     export default {
-        name: "indexBanner"
+        name: "ktvListBanner"
     }
 </script>
 

@@ -1,49 +1,57 @@
 <template>
-    <footer>
-      <div class="top">
-        <div class="login">
-          <a href="#">登录</a>
-          <a href="#">注册</a>
-        </div>
-        <div class="city">
-          <span>城市：</span>
-          <a href="#">西安</a>
-        </div>
+  <footer>
+    <div class="pos">
+      当前位置： 西安团购 > KTV团购
+    </div>
+    <div class="top">
+      <div class="login">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
       </div>
-      <div class="nav">
-        <a href="#/index">首页</a>
-        <a href="#">我的</a>
-        <a href="#">美团下载</a>
-        <a href="#">电脑版</a>
-        <a href="#">帮助</a>
+      <div class="city">
+        <span>城市：</span>
+        <a href="#">西安</a>
       </div>
-      <div class="link">
-        友情链接：
-        <a href="#">猫眼电影</a>
-        <a href="#">大众点评</a>
-        <a href="#">美团旅行</a>
-        <a href="#">榛果民宿</a>
-        <a href="#">大众点评下载</a>
-        <a href="#">美团收银官网</a>
-        <a href="#">美团点评餐饮学院</a>
-        <a href="#">快驴进货商家合作</a>
-      </div>
-      <div class="bottom">
-        <span>©2018 美团网 京ICP证070791号</span>
-      </div>
-    </footer>
+    </div>
+    <div class="nav">
+      <a href="#/index">首页</a>
+      <a href="#">我的</a>
+      <a href="#">美团下载</a>
+      <a href="#">电脑版</a>
+      <a href="#">帮助</a>
+    </div>
+    <div class="link">
+      友情链接：
+      <a href="#">猫眼电影</a>
+      <a href="#">大众点评</a>
+      <a href="#">美团旅行</a>
+      <a href="#">榛果民宿</a>
+      <a href="#">大众点评下载</a>
+      <a href="#">美团收银官网</a>
+      <a href="#">美团点评餐饮学院</a>
+      <a href="#">快驴进货商家合作</a>
+    </div>
+    <div class="bottom">
+      <span>©2018 美团网 京ICP证070791号</span>
+    </div>
+  </footer>
 </template>
 
 <script>
     export default {
-        name: "indexFooter"
+        name: "ktvListFooter"
     }
 </script>
 
 <style lang="scss" scoped>
   footer{
     padding: .15rem .1rem .2rem;
+    .pos{
+      font-size: .12rem;
+      color: #06C1AE;
+    }
     .top{
+      margin-top: .15rem;
       display: flex;
       justify-content: space-between;
       .login{

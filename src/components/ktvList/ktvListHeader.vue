@@ -1,17 +1,21 @@
 <template>
   <header>
     <div class="h_left">
-      <a href="#/ktvlist">
+      <a href="#/index">
         <img src="../../assets/yuan/img/ktvList/header-back.jpg" alt=""/>
       </a>
     </div>
     <div class="h_center">
-      <span>商家详情</span>
+      <span>分类</span>
     </div>
     <div class="h_right">
       <a href="#">
-        <img src="../../assets/yuan/img/ktv/header-menu.jpg" alt=""/>
-        <span>导航</span>
+        <img src="../../assets/yuan/img/ktvList/header-user.jpg" alt=""/>
+        <span>我的</span>
+      </a>
+      <a href="#">
+        <img src="../../assets/yuan/img/ktvList/header-search.jpg" alt=""/>
+        <span>搜索</span>
       </a>
     </div>
   </header>
@@ -19,7 +23,7 @@
 
 <script>
     export default {
-        name: "ktvHeader"
+        name: "ktvListHeader"
     }
 </script>
 
@@ -27,6 +31,7 @@
   header{
     height: .51rem;
     padding: .1rem ;
+    padding-right: .13rem;
     background: #06C1AE;
     font-size: .14rem;
     display: flex;
@@ -37,6 +42,11 @@
     .h_left{
       display: flex;
       align-items: center;
+      span{
+        font-size: .16rem;
+        color: white;
+        margin-right: .03rem;
+      }
       img{
         width: .23rem;
       }
@@ -58,7 +68,7 @@
         align-items: center;
         margin-left: .3rem;
         img{
-          width: .3rem;
+          width: .23rem;
         }
       }
 

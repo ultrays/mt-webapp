@@ -20,9 +20,9 @@
       <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
       <span>美食</span>
     </a>
-    <a href="#" class="item">
+    <a href="#/ktvlist" class="item">
       <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
+      <span>KTV</span>
     </a>
     <a href="#" class="item">
       <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
