@@ -8,7 +8,7 @@
         <div class="info">
           <div class="tit">一键预订，K歌特快通道</div>
           <div class="price"><span>100</span>起</div>
-          <span class="icon"><img src="../../assets/yuan/img/ktv/reverse-go.jpg" alt=""/></span>
+          <span class="icon"><img src="../../assets/yuan/img/ktv/icon-go.jpg" alt=""/></span>
         </div>
       </div>
     </div>

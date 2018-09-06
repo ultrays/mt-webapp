@@ -46,7 +46,7 @@
     </div>
     <div class="group-other">
       查看其他2条团购
-      <span class="icon"><img src="../../assets/yuan/img/ktv/reverse-go.jpg" alt=""/></span>
+      <span class="icon"><img src="../../assets/yuan/img/ktv/icon-go.jpg" alt=""/></span>
     </div>
   </div>
 </template>

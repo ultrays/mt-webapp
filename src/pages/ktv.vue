@@ -6,6 +6,9 @@
       <Reserve class="reserve"></Reserve>
       <Group class="group"></Group>
       <Evaluate class="evaluate"></Evaluate>
+      <Others class="others"></Others>
+      <Nearby class="nearby"></Nearby>
+      <Footer class="footer"></Footer>
     </div>
 </template>
 
@@ -16,6 +19,9 @@
     import Reserve from '../components/ktv/ktvReserve'
     import Group from '../components/ktv/ktvGroup'
     import Evaluate from "../components/ktv/ktvEvaluate";
+    import Others from "../components/ktv/ktvOthers";
+    import Nearby from "../components/ktv/ktvNearby";
+    import Footer from "../components/ktv/ktvFooter";
     export default {
         name: "ktv",
         components:{
@@ -24,7 +30,10 @@
           Location,
           Reserve,
           Group,
-          Evaluate
+          Evaluate,
+          Others,
+          Nearby,
+          Footer
         }
     }
 </script>
@@ -37,6 +46,15 @@
     margin-top: .1rem;
   }
   .evaluate{
+    margin-top: .1rem;
+  }
+  .others{
+    margin-top: .1rem;
+  }
+  .nearby{
+    margin-top: .1rem;
+  }
+  .footer{
     margin-top: .1rem;
   }
 </style>
