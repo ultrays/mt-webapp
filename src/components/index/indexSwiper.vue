@@ -37,6 +37,7 @@
 
 <style lang="scss" scoped>
   .swiper-container{
+    background: white;
     border-bottom: 1px solid #EAE7E1;
   }
 </style>

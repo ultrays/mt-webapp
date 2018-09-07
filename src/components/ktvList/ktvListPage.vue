@@ -31,6 +31,11 @@
       border: 1px solid #06C1AE;
       border-radius: .03rem;
     }
+    a:first-child{
+      color: #999999;
+      background: #DCDCDC;
+      border-color: #DCDCDC;
+    }
     span{
       font-size: .14rem;
       color: #6B6B6B;

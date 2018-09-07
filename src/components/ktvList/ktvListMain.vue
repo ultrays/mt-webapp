@@ -17,16 +17,6 @@
         ListItem,
         Page
       }
-      // data(){
-      //   return{
-      //     a:false
-      //   }
-      // },
-      // methods:{
-      //   func(){
-      //     this.a=!this.a;
-      //   }
-      // }
     }
 </script>
 
@@ -35,17 +25,3 @@
     margin-top: .1rem;
   }
 </style>
-
-
-<!--<div>-->
-  <!--<div1 @click="func"></div1>-->
-  <!--<div1></div1>-->
-  <!--<div1></div1>-->
-  <!--<div1></div1>-->
-
-  <!--<box v-show="a"></box>-->
-  <!--<box></box>-->
-  <!--<box></box>-->
-  <!--<box></box>-->
-
-<!--</div>-->

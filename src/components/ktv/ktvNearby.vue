@@ -2,59 +2,17 @@
   <div class="nearby">
     <div class="header">附近团购</div>
     <div class="list">
-      <div class="item">
+      <div v-for="item in items" class="item">
         <div class="item-img">
-          <img src="../../assets/yuan/img/index/intro_item1.jpg" alt=""/>
+          <img :src="item.imgSrc" alt=""/>
         </div>
         <div class="item-main">
-          <div class="item-name">享遇牛排海鲜自助餐厅</div>
-          <div class="item-info">[小寨]午晚通用自助</div>
+          <div class="item-name">{{item.name}}</div>
+          <div class="item-info">{{item.info}}</div>
           <div class="item-price">
-            <span class="price-now"><b>66</b>元</span>
-            <span class="price-market">门市价:<b>79</b>元</span>
-            <span class="sale-count">已售<b>136374</b></span>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-img">
-          <img src="../../assets/yuan/img/index/intro_item1.jpg" alt=""/>
-        </div>
-        <div class="item-main">
-          <div class="item-name">享遇牛排海鲜自助餐厅</div>
-          <div class="item-info">[小寨]午晚通用自助</div>
-          <div class="item-price">
-            <span class="price-now"><b>66</b>元</span>
-            <span class="price-market">门市价:<b>79</b>元</span>
-            <span class="sale-count">已售<b>136374</b></span>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-img">
-          <img src="../../assets/yuan/img/index/intro_item1.jpg" alt=""/>
-        </div>
-        <div class="item-main">
-          <div class="item-name">享遇牛排海鲜自助餐厅</div>
-          <div class="item-info">[小寨]午晚通用自助</div>
-          <div class="item-price">
-            <span class="price-now"><b>66</b>元</span>
-            <span class="price-market">门市价:<b>79</b>元</span>
-            <span class="sale-count">已售<b>136374</b></span>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-img">
-          <img src="../../assets/yuan/img/index/intro_item1.jpg" alt=""/>
-        </div>
-        <div class="item-main">
-          <div class="item-name">享遇牛排海鲜自助餐厅</div>
-          <div class="item-info">[小寨]午晚通用自助</div>
-          <div class="item-price">
-            <span class="price-now"><b>66</b>元</span>
-            <span class="price-market">门市价:<b>79</b>元</span>
-            <span class="sale-count">已售<b>136374</b></span>
+            <span class="price-now"><b>{{item.priceNow}}</b>元</span>
+            <span class="price-market">门市价:<b>{{item.priceMarket}}</b>元</span>
+            <span class="sale-count">已售<b>{{item.saleCount}}</b></span>
           </div>
         </div>
       </div>
@@ -64,7 +22,42 @@
 
 <script>
     export default {
-        name: "ktvNearby"
+        name: "ktvNearby",
+        data(){
+          return{
+            items:[
+              {
+                imgSrc:require("../../assets/yuan/img/ktv/nearby-item1.jpg"),
+                name:'音悦汇量贩KTV',
+                info:'[小寨]阳光场4小时欢唱+小吃饮品套餐',
+                priceNow:68,
+                priceMarket:248,
+                saleCount:722
+              },{
+                imgSrc:require("../../assets/yuan/img/ktv/nearby-item2.jpg"),
+                name:'欢乐迪氧吧KTV（小寨旗舰店)',
+                info:'[小寨]周一至周日白天场4小时欢唱+精美套餐',
+                priceNow:68,
+                priceMarket:79,
+                saleCount:838
+              },{
+                imgSrc:require("../../assets/yuan/img/ktv/nearby-item3.jpg"),
+                name:'唱吧麦颂量贩KTV',
+                info:'[小寨]周一至周日时段2选1欢唱+小吃饮料套餐',
+                priceNow:68,
+                priceMarket:398,
+                saleCount:1901
+              },{
+                imgSrc:require("../../assets/yuan/img/ktv/nearby-item4.jpg"),
+                name:'悦豪KTV',
+                info:'[小寨]周一至周日白天场欢唱套餐',
+                priceNow:68,
+                priceMarket:588,
+                saleCount:1092
+              }
+            ]
+          }
+        }
     }
 </script>
 
@@ -89,8 +82,11 @@
         width: .9rem;
         height: .82rem;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img{
-          width: 100%;
+          height: 100%;
         }
       }
       .item-main{

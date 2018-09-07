@@ -5,46 +5,20 @@
       团购
       <span class="group-count">（<span class="count">5</span>）</span>
     </div>
-    <div class="item">
+    <div v-for="(item,index) in items" v-if="index<showCount" class="item">
       <div class="item-img">
-        <img src="../../assets/yuan/img/ktv/group-item1.png" alt=""/>
+        <img :src="item.imgSrc" alt=""/>
       </div>
       <div class="info">
-        <div class="tit">周一至周日时段3选1欢唱+小吃饮品套餐</div>
+        <div class="tit">{{item.tit}}</div>
         <div class="item-price">
-          <span class="price-now"><b>168</b>元</span>
-          <span class="price-market">门市价:<b>552</b>元</span>
-          <span class="sale-count">已售<b>2389</b></span>
+          <span class="price-now"><b>{{item.priceNow}}</b>元</span>
+          <span class="price-market">门市价:<b>{{item.priceMarket}}</b>元</span>
+          <span class="sale-count">已售<b>{{item.saleCount}}</b></span>
         </div>
       </div>
     </div>
-    <div class="item">
-      <div class="item-img">
-        <img src="../../assets/yuan/img/ktv/group-item1.png" alt=""/>
-      </div>
-      <div class="info">
-        <div class="tit">周一至周日时段3选1欢唱+小吃饮品套餐</div>
-        <div class="item-price">
-          <span class="price-now"><b>168</b>元</span>
-          <span class="price-market">门市价:<b>552</b>元</span>
-          <span class="sale-count">已售<b>2389</b></span>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-img">
-        <img src="../../assets/yuan/img/ktv/group-item1.png" alt=""/>
-      </div>
-      <div class="info">
-        <div class="tit">周一至周日时段3选1欢唱+小吃饮品套餐</div>
-        <div class="item-price">
-          <span class="price-now"><b>168</b>元</span>
-          <span class="price-market">门市价:<b>552</b>元</span>
-          <span class="sale-count">已售<b>2389</b></span>
-        </div>
-      </div>
-    </div>
-    <div class="group-other">
+    <div class="group-other" v-if="showCount!=items.length" @click="showMore">
       查看其他2条团购
       <span class="icon"><img src="../../assets/yuan/img/ktv/icon-go.jpg" alt=""/></span>
     </div>
@@ -53,7 +27,24 @@
 
 <script>
     export default {
-        name: "groupktvGroup"
+        name: "groupktvGroup",
+        data(){
+          return{
+            showCount:3,
+            items:[
+              {imgSrc:require('../../assets/yuan/img/ktv/group-item1.jpg'),tit:'周一至周日时段3选1欢唱+小吃饮品套餐',priceNow:168,priceMarket:552,saleCount:2394},
+              {imgSrc:require('../../assets/yuan/img/ktv/group-item2.jpg'),tit:'周一至周日白天/午夜场2选1+小吃饮品套餐',priceNow:98,priceMarket:384,saleCount:1547},
+              {imgSrc:require('../../assets/yuan/img/ktv/group-item3.jpg'),tit:'周一至周日时段3选1欢唱+小吃饮品套餐',priceNow:268,priceMarket:745,saleCount:1130},
+              {imgSrc:require('../../assets/yuan/img/ktv/group-item4.jpg'),tit:'阳光场4小时欢唱+小吃饮品套餐',priceNow:68,priceMarket:248,saleCount:722},
+              {imgSrc:require('../../assets/yuan/img/ktv/group-item5.jpg'),tit:'周一至周日黄金场3小时欢唱',priceNow:98,priceMarket:384,saleCount:182},
+            ]
+          }
+        },
+        methods:{
+          showMore(){
+            this.showCount=this.items.length;
+          }
+        }
     }
 </script>
 
@@ -151,3 +142,5 @@
     }
   }
 </style>
+
+

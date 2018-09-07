@@ -1,51 +1,31 @@
 <template>
   <nav>
-    <a href="#" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
-    </a>
-    <a href="#" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
-    </a>
-    <a href="#" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
-    </a>
-    <a href="#" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
-    </a>
-    <a href="#" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
-    </a>
-    <a href="#/ktvlist" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>KTV</span>
-    </a>
-    <a href="#" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
-    </a>
-    <a href="#" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
-    </a>
-    <a href="#" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
-    </a>
-    <a href="#" class="item">
-      <img src="../../assets/yuan/img/index/nav1_img1.jpg" alt=""/>
-      <span>美食</span>
+    <a v-for="i in item" :href="i.url" class="item">
+      <img :src="i.imgSrc" alt=""/>
+      <span>{{i.name}}</span>
     </a>
   </nav>
 </template>
 
 <script>
     export default {
-        name: "indexSwiperNav1"
+      name: "indexSwiperNav1",
+      data(){
+        return {
+          item:[
+            {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img1.jpg'),name:'美食'},
+            {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img2.jpg'),name:'猫眼电影'},
+            {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img3.jpg'),name:'酒店'},
+            {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img4.jpg'),name:'休闲娱乐'},
+            {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img5.jpg'),name:'外卖'},
+            {url:'#/ktvlist',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img6.jpg'),name:'KTV'},
+            {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img7.jpg'),name:'周边游'},
+            {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img8.jpg'),name:'丽人'},
+            {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img9.jpg'),name:'小吃快餐'},
+            {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img10.jpg'),name:'火车票'},
+          ]
+        }
+      }
     }
 </script>
 
@@ -55,13 +35,13 @@
     /*justify-content: space-around;*/
     flex-wrap: wrap;
     padding: .1rem 0rem .05rem;
-    background: pink;
+    background: white;
     .item{
-      width: .4rem;
+      width: .54rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0 .17rem .2rem;
+      margin: 0 .1rem .2rem;
       img{
         width: .4rem;
         margin-bottom: .05rem;
