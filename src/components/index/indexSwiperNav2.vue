@@ -1,8 +1,8 @@
 <template>
   <nav>
-    <a v-for="i in item" :href="i.url" class="item">
-      <img :src="i.imgSrc" alt=""/>
-      <span>{{i.name}}</span>
+    <a v-for="item in items" :href="item.url" class="item">
+      <img :src="item.imgSrc" alt=""/>
+      <span>{{item.name}}</span>
     </a>
   </nav>
 </template>
@@ -12,7 +12,7 @@
       name: "indexSwiperNav2",
       data(){
         return {
-          item:[
+          items:[
             {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav2_img1.jpg'),name:'生活服务'},
             {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav2_img2.jpg'),name:'今日新单'},
             {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav2_img3.jpg'),name:'足疗/按摩'},
@@ -25,6 +25,9 @@
             {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav2_img10.jpg'),name:'全部分类'},
           ]
         }
+      },
+      props:{
+        data:{}
       }
     }
 </script>

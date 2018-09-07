@@ -1,8 +1,8 @@
 <template>
   <nav>
-    <a v-for="i in item" :href="i.url" class="item">
-      <img :src="i.imgSrc" alt=""/>
-      <span>{{i.name}}</span>
+    <a v-for="item in items" :href="item.url" class="item">
+      <img :src="item.imgSrc" alt=""/>
+      <span>{{item.name}}</span>
     </a>
   </nav>
 </template>
@@ -12,7 +12,7 @@
       name: "indexSwiperNav1",
       data(){
         return {
-          item:[
+          items:[
             {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img1.jpg'),name:'美食'},
             {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img2.jpg'),name:'猫眼电影'},
             {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img3.jpg'),name:'酒店'},
@@ -25,6 +25,9 @@
             {url:'#',imgSrc:require('../../assets/yuan/img/index/nav/nav1_img10.jpg'),name:'火车票'},
           ]
         }
+      },
+      props:{
+        data:{}
       }
     }
 </script>

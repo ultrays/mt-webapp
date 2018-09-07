@@ -2,10 +2,10 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <SwiperNav1></SwiperNav1>
+          <SwiperNav1 :data="data"></SwiperNav1>
         </div>
         <div class="swiper-slide">
-          <SwiperNav2></SwiperNav2>
+          <SwiperNav2 :data="data"></SwiperNav2>
         </div>
       </div>
       <!-- 如果需要分页器 -->
@@ -22,6 +22,9 @@
     components:{
       SwiperNav1,
       SwiperNav2
+    },
+    props:{
+      data:{}
     },
     mounted(){
       new Swiper ('.swiper-container', {
