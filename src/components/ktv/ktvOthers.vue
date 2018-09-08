@@ -28,6 +28,7 @@
       border-top: 1px solid #ECE9E4;
       border-bottom: 1px solid #ECE9E4;
       margin-bottom: .1rem;
+      margin-top: .1rem;
       .header{
         height: .45rem;
         font-size: .19rem;

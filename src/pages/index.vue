@@ -2,8 +2,8 @@
   <div>
     <Header></Header>
     <Banner></Banner>
-    <Swiper class="swiper" :data="data.navItems"></Swiper>
-    <Intro></Intro>
+    <Swiper :data="data.navItems"></Swiper>
+    <Intro :data="data.introItems"></Intro>
     <Footer></Footer>
   </div>
 </template>
@@ -14,7 +14,7 @@
   import Swiper from '../components/index/indexSwiper';
   import Intro from '../components/index/indexIntro';
   import Footer from '../components/index/indexFooter';
-  import {Index} from "../apis";
+  import {Index} from "../apis/index";
 
   export default {
     name: "index",
@@ -34,7 +34,7 @@
       cat(){
         Index.getCat((data)=>{
           this.data=data;
-          console.log(data);
+          // console.log(data);
         })
       }
     },
@@ -45,7 +45,5 @@
 </script>
 
 <style scoped>
-  .swiper{
-    margin-bottom: .1rem;
-  }
+
 </style>

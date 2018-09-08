@@ -2,7 +2,7 @@
     <div>
       <Header></Header>
       <Banner></Banner>
-      <List></List>
+      <List :data="data.items"></List>
       <Footer></Footer>
     </div>
 </template>
@@ -12,17 +12,34 @@
     import Banner from '../components/ktvList/ktvListBanner'
     import List from '../components/ktvList/ktvListMain'
     import Footer from '../components/ktvList/ktvListFooter'
+    import {KtvList} from "../apis/ktvList";
     export default {
-        name: "ktvList",
-        components:{
-          Header,
-          Banner,
-          List,
-          Footer
+      name: "ktvList",
+      components:{
+        Header,
+        Banner,
+        List,
+        Footer
+      },
+      data(){
+        return{
+          data:{}
         }
+      },
+      methods:{
+        cat(){
+          KtvList.getCat((data)=>{
+            this.data=data;
+            // console.log(data);
+          })
+        }
+      },
+      created(){
+        this.cat();
+      }
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

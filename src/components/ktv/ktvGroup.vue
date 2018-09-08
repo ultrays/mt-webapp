@@ -27,24 +27,20 @@
 
 <script>
     export default {
-        name: "groupktvGroup",
-        data(){
-          return{
-            showCount:3,
-            items:[
-              {imgSrc:require('../../assets/yuan/img/ktv/group-item1.jpg'),tit:'周一至周日时段3选1欢唱+小吃饮品套餐',priceNow:168,priceMarket:552,saleCount:2394},
-              {imgSrc:require('../../assets/yuan/img/ktv/group-item2.jpg'),tit:'周一至周日白天/午夜场2选1+小吃饮品套餐',priceNow:98,priceMarket:384,saleCount:1547},
-              {imgSrc:require('../../assets/yuan/img/ktv/group-item3.jpg'),tit:'周一至周日时段3选1欢唱+小吃饮品套餐',priceNow:268,priceMarket:745,saleCount:1130},
-              {imgSrc:require('../../assets/yuan/img/ktv/group-item4.jpg'),tit:'阳光场4小时欢唱+小吃饮品套餐',priceNow:68,priceMarket:248,saleCount:722},
-              {imgSrc:require('../../assets/yuan/img/ktv/group-item5.jpg'),tit:'周一至周日黄金场3小时欢唱',priceNow:98,priceMarket:384,saleCount:182},
-            ]
-          }
-        },
-        methods:{
-          showMore(){
-            this.showCount=this.items.length;
-          }
+      name: "groupktvGroup",
+      data(){
+        return{
+          showCount:3
         }
+      },
+      props:{
+        items:Array
+      },
+      methods:{
+        showMore(){
+          this.showCount=this.items.length;
+        }
+      }
     }
 </script>
 
@@ -54,6 +50,7 @@
     padding-left: .1rem;
     border-top: 1px solid #ECEAE5;
     border-bottom: 1px solid #ECEAE5;
+    margin-top: .1rem;
     .header{
       font-size: .18rem;
       display: flex;

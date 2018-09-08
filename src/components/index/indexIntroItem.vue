@@ -18,24 +18,10 @@
 </template>
 
 <script>
-    import {Index} from "../../apis";
     export default {
       name: "indexIntroItem",
-      data(){
-        return {
-          items:[]
-        }
-      },
-      methods:{
-        cat(){
-          Index.getCat((data)=>{
-            this.items=data.introItems;
-            console.log(data);
-          })
-        }
-      },
-      created(){
-        this.cat();
+      props:{
+        items:{}
       }
     }
 </script>

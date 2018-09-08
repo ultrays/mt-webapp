@@ -43,6 +43,7 @@
 <style lang="scss" scoped>
   footer{
     padding: .15rem .1rem .2rem;
+    margin-top: .1rem;
     .top{
       display: flex;
       justify-content: space-between;

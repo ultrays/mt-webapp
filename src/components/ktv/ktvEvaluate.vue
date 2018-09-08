@@ -51,49 +51,10 @@
 
 <script>
     export default {
-        name: "ktvEvaluate",
-        data(){
-          return{
-            items:[
-              {
-                imgSrc:require("../../assets/yuan/img/ktv/evaluate-item1-head.jpg"),
-                name:'陈陈陈pearl',
-                date:'2018-07-22',
-                isGood:true,
-                text:'服务态度挺不错的，刚开始在小包，觉得烟味太重了，所以要求换包厢，结果竟然换了个中包，我们就三个人，里面很宽敞，冷气很足，音响效果也挺不错的，歌单里面歌也挺全的，但是为什么没有情歌之王？卫生间环境也挺干净的，总之是值得好评的',
-                imgs:[
-                  {img:require("../../assets/yuan/img/ktv/evaluate-item1-img1.jpg")},
-                  {img:require("../../assets/yuan/img/ktv/evaluate-item1-img2.jpg")},
-                  {img:require("../../assets/yuan/img/ktv/evaluate-item1-img3.jpg")}
-                ],
-                replyDate:'2018-07-22',
-                replyText:'亲！非常感激谢您对我们的支持与关注、我们会继续努力、为您提供更好的服务、欢迎您再次光临！'
-              },{
-                imgSrc:require("../../assets/yuan/img/ktv/evaluate-item2-head.jpg"),
-                name:'ZSw681154915',
-                date:'2018-09-04',
-                isGood:false,
-                text:'服务很好  环境也不错  干净卫生  玩的很开心',
-                imgs:[
-                  {img:require("../../assets/yuan/img/ktv/evaluate-item2-img.jpg")}
-                ],
-                replyDate:'2018-09-04',
-                replyText:'亲！非常感激谢您对我们的支持与关注、我们会继续努力、为您提供更好的服务、欢迎您再次光临！'
-              },{
-                imgSrc:require("../../assets/yuan/img/ktv/evaluate-item3-head.jpg"),
-                name:'ICouldBeTheOne',
-                date:'2018-05-28',
-                isGood:true,
-                text:'今天去的时候人很多 需要等位 不过也是很快 一会会就排到了 团购的淘宝很划算 ktv收拾的也很干净 进去没有异味 音响效果不错 而且也送了爆米花和喝的 总体上来说 还是可以的 地点也很好找 很方便 就在军区服务社小马欢乐影城的对面 嗯～你值得拥有',
-                imgs:[
-                  {img:require("../../assets/yuan/img/ktv/evaluate-item3-img.jpg")}
-                ],
-                replyDate:'2018-05-28',
-                replyText:'亲！非常感激谢您对我们的支持与关注、我们会继续努力、为您提供更好的服务、欢迎您再次光临！'
-              }
-            ]
-          }
-        }
+      name: "ktvEvaluate",
+      props:{
+        items:{}
+      }
     }
 </script>
 
@@ -103,6 +64,7 @@
     background: white;
     border-top: 1px solid #ECE9E4;
     border-bottom: 1px solid #ECE9E4;
+    margin-top: .1rem;
     .header{
       height: .45rem;
       font-size: .18rem;

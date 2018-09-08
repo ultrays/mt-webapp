@@ -1,7 +1,7 @@
 <template>
     <div class="list">
       <Selector></Selector>
-      <ListItem class="listItem"></ListItem>
+      <ListItem :items="data"></ListItem>
       <Page></Page>
     </div>
 </template>
@@ -16,12 +16,13 @@
         Selector,
         ListItem,
         Page
+      },
+      props:{
+        data:{}
       }
     }
 </script>
 
-<style lang="scss" scoped>
-  .listItem{
-    margin-top: .1rem;
-  }
+<style scoped>
+
 </style>

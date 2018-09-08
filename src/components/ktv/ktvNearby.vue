@@ -22,42 +22,10 @@
 
 <script>
     export default {
-        name: "ktvNearby",
-        data(){
-          return{
-            items:[
-              {
-                imgSrc:require("../../assets/yuan/img/ktv/nearby-item1.jpg"),
-                name:'音悦汇量贩KTV',
-                info:'[小寨]阳光场4小时欢唱+小吃饮品套餐',
-                priceNow:68,
-                priceMarket:248,
-                saleCount:722
-              },{
-                imgSrc:require("../../assets/yuan/img/ktv/nearby-item2.jpg"),
-                name:'欢乐迪氧吧KTV（小寨旗舰店)',
-                info:'[小寨]周一至周日白天场4小时欢唱+精美套餐',
-                priceNow:68,
-                priceMarket:79,
-                saleCount:838
-              },{
-                imgSrc:require("../../assets/yuan/img/ktv/nearby-item3.jpg"),
-                name:'唱吧麦颂量贩KTV',
-                info:'[小寨]周一至周日时段2选1欢唱+小吃饮料套餐',
-                priceNow:68,
-                priceMarket:398,
-                saleCount:1901
-              },{
-                imgSrc:require("../../assets/yuan/img/ktv/nearby-item4.jpg"),
-                name:'悦豪KTV',
-                info:'[小寨]周一至周日白天场欢唱套餐',
-                priceNow:68,
-                priceMarket:588,
-                saleCount:1092
-              }
-            ]
-          }
-        }
+      name: "ktvNearby",
+      props:{
+        items:{}
+      }
     }
 </script>
 
@@ -67,6 +35,7 @@
     background: white;
     border-top: 1px solid #ECE9E4;
     border-bottom: 1px solid #ECE9E4;
+    margin-top: .1rem;
     .header {
       height: .45rem;
       font-size: .19rem;

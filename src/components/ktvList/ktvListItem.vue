@@ -1,28 +1,28 @@
 <template>
   <div class="list">
-    <div v-for="i in item" class="item">
-      <a :href="i.url"></a>
+    <div v-for="item in items" class="item">
+      <a :href="item.url"></a>
       <div class="item-top">
         <div class="item-img">
-          <img :src="i.imgSrc" alt=""/>
+          <img :src="item.imgSrc" alt=""/>
         </div>
         <div class="item-main">
-          <div class="item-name">{{i.name}}</div>
+          <div class="item-name">{{item.name}}</div>
           <div class="item-score">
             <img src="../../assets/yuan/img/ktvList/item-score.jpg" alt=""/>
           </div>
           <div class="item-price">
-            <span class="price"><b>{{i.price}}</b>元起</span>
+            <span class="price"><b>{{item.price}}</b>元起</span>
             <span class="position">
-              <span class="pos-name">{{i.posName}}</span>
-              <span class="pos-distance">{{i.posDistance}}</span>
+              <span class="pos-name">{{item.posName}}</span>
+              <span class="pos-distance">{{item.posDistance}}</span>
             </span>
           </div>
         </div>
       </div>
       <div class="item-bottom">
-        <span>{{i.tip1}}</span>
-        <span>{{i.tip2}}</span>
+        <span>{{item.tip1}}</span>
+        <span>{{item.tip2}}</span>
       </div>
     </div>
   </div>
@@ -31,132 +31,113 @@
 <script>
     export default {
         name: "ktvListItem",
-        data(){
-          return{
-            item:[
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item1.jpg'), name:'音悦汇量贩KTV(军人服务社店)',  price:68, posName:'小寨', posDistance:'657m', tip1:'小包6小时100元, 中包6小时100元',  tip2:'68元/券，4小时欢唱+小吃饮品套餐'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item2.jpg'), name:'唱吧麦颂KTV(小寨店)',  price:30, posName:'小寨', posDistance:'533m', tip1:'小包2小时100元, 中包2小时110元',  tip2:'30元/券，3小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item3.jpg'), name:'欢乐迪音乐氧吧(小寨旗舰店)',  price:38, posName:'小寨', posDistance:'598m', tip1:'小包6小时690元, 中包6小时690元',  tip2:'38元/券，1小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item4.jpg'), name:'魔方KTV(金莎国际购物广场店)',  price:48.8, posName:'小寨', posDistance:'805m', tip1:'小包3小时360元, 中包3小时360元',  tip2:'48.8元/券，6小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item5.jpg'), name:'台北纯k(曲江店)',  price:68, posName:'大雁塔', posDistance:'1.27km', tip1:'小包6小时90元, 中包6小时90元',  tip2:'68元/券，4小时+小吃饮品'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item6.jpg'), name:'悦豪KTV(小寨店)',  price:68, posName:'小寨', posDistance:'1.21km', tip1:'68元/券，6小时欢唱',  tip2:'68元/券，6小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item7.jpg'), name:'Gaga纯K',  price:16.6, posName:'政法/师大', posDistance:'2.09km', tip1:'小包3小时90元, 中包3小时90元',  tip2:'16.6元/券，3小时'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item8.jpg'), name:'真爱KTV(旗舰店)',  price:258, posName:'长安立交', posDistance:'1.24km', tip1:'小包3小时190元, 中包3小时220元',  tip2:'258元/券，欢唱3小时'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item9.jpg'), name:'简约派对KTV',  price:48, posName:'太乙路', posDistance:'1.78km', tip1:'小包2小时71.9元, 中包2小时71.9元',  tip2:'48元/券，6.5小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item10.jpg'),name:'爱尚纯k',  price:38, posName:'朱雀大街北段', posDistance:'2.4km', tip1:'小包3小时100元, 中包3小时100元',  tip2:'38元/券，3小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item11.jpg'),name:'MAX量贩KTV',  price:31, posName:'南稍门', posDistance:'2.65km', tip1:'中包6小时500元, 大包6小时500元',  tip2:'31元/券，3小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item12.jpg'),name:'欢乐迪KTV(电视塔店)',  price:68, posName:'电视塔', posDistance:'2.7km', tip1:'小包3小时100元, 中包3小时100元',  tip2:'68元/券，6小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item13.jpg'),name:'星光天地KTV',  price:78, posName:'枫林绿洲', posDistance:'5.14km', tip1:'小包3小时170元, 中包3小时220元',  tip2:'78元/券，欢唱6小时+软饮套餐'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item14.jpg'),name:'纯k魔方(东南城角店)',  price:38, posName:'交大/理工大', posDistance:'3.76km', tip1:'中包3小时160元, 大包3小时120元',  tip2:'38元/券，3小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item15.jpg'),name:'GOGO HAPPY(东大街店)',  price:98, posName:'碑林区', posDistance:'4.32km', tip1:'小包3小时62元, 中包3小时62元',  tip2:'98元/券，5小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item16.jpg'),name:'新台北KTV',  price:38, posName:'电子城', posDistance:'3.93km', tip1:'小包3小时261元, 中包3小时281元',  tip2:'38元/券，3小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item17.jpg'),name:'音范纯K',  price:18, posName:'电视塔', posDistance:'3.38km', tip1:'小包4小时130元, 中包4小时130元',  tip2:'18元/券，2小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item18.jpg'),name:'至尚纯K',  price:158, posName:'西影路', posDistance:'2.73km', tip1:'158元/券，6小时欢唱',  tip2:'158元/券，6小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item19.jpg'),name:'蒂爵王朝音乐会所',  price:58, posName:'南大学城', posDistance:'8.03km', tip1:'小包3小时690元, 中包3小时690元',  tip2:'58元/券，3小时欢唱'},
-              {url:'#/ktv',imgSrc:require('../../assets/yuan/img/ktvList/list/list-item20.jpg'),name:'乐秀KTV(朱雀路店)',  price:9.9, posName:'电视塔', posDistance:'3.27km', tip1:'小包4小时398元, 中包4小时398元',  tip2:'9.9元/券，1小时欢唱'}
-            ]
-          }
+        props:{
+          items:{}
         }
     }
 </script>
 
 <style lang="scss" scoped>
-  .item{
-    background: white;
-    border-top: 1px solid #E3E0D8;
-    border-bottom: 1px solid #EAE7E0;
-    margin-bottom: .1rem;
-    position: relative;
-    a{
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-    }
-    .item-top{
-      display: flex;
-      padding: .14rem .1rem .05rem;
-      border-bottom: 1px solid #F1F0EC;
-      .item-img{
-        width: .65rem;
-        height: .65rem;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-          height: 100%;
-        }
-      }
-      .item-main{
-        flex: 1;
-        margin-left: .1rem;
-        .item-name{
-          font-size: .16rem;
-          color: #333333;
-        }
-        .item-score{
-          margin-top: .08rem;
-          img{
-            width: 1.2rem;
-            height: .16rem;
-          }
-        }
-        .item-price{
-          font-size: .13rem;
-          color: #666666;
-          margin-top: .05rem;
-          position: relative;
-          .price{
-            font-size: .13rem;
-            color: #06C1AE;
-            b{
-              font-size: .18rem;
-              font-weight: normal;
-            }
-          }
-          .position{
-            position: absolute;
-            right: 0;
-            .pos-distance{
-              margin-left: .05rem;
-            }
-          }
-        }
-      }
-    }
-    .item-bottom{
-      padding: .1rem 0;
-      span{
+  .list{
+    margin-top: .1rem;
+    .item{
+      background: white;
+      border-top: 1px solid #E3E0D8;
+      border-bottom: 1px solid #EAE7E0;
+      margin-bottom: .1rem;
+      position: relative;
+      a{
         display: block;
-        margin-left: .85rem;
-        font-size: .13rem;
-        font-weight: lighter;
+        width: 100%;
+        height: 100%;
+        position: absolute;
       }
-      span:nth-child(1):before{
-        content: "订";
-        display: inline-block;
-        background: #f5716e;
-        color: #fff;
-        font-size: .12rem;
-        padding: .02rem;
-        border-radius: .02rem;
-        line-height: 1;
-        margin-right: .1rem;
+      .item-top{
+        display: flex;
+        padding: .14rem .1rem .05rem;
+        border-bottom: 1px solid #F1F0EC;
+        .item-img{
+          width: .65rem;
+          height: .65rem;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+            height: 100%;
+          }
+        }
+        .item-main{
+          flex: 1;
+          margin-left: .1rem;
+          .item-name{
+            font-size: .16rem;
+            color: #333333;
+          }
+          .item-score{
+            margin-top: .08rem;
+            img{
+              width: 1.2rem;
+              height: .16rem;
+            }
+          }
+          .item-price{
+            font-size: .13rem;
+            color: #666666;
+            margin-top: .05rem;
+            position: relative;
+            .price{
+              font-size: .13rem;
+              color: #06C1AE;
+              b{
+                font-size: .18rem;
+                font-weight: normal;
+              }
+            }
+            .position{
+              position: absolute;
+              right: 0;
+              .pos-distance{
+                margin-left: .05rem;
+              }
+            }
+          }
+        }
       }
-      span:nth-child(2):before{
-        content: "团";
-        display: inline-block;
-        background: #06C1AE;
-        color: #fff;
-        font-size: .12rem;
-        padding: .02rem;
-        border-radius: .02rem;
-        line-height: 1;
-        margin-right: .1rem;
-        margin-top: .1rem;
+      .item-bottom{
+        padding: .1rem 0;
+        span{
+          display: block;
+          margin-left: .85rem;
+          font-size: .13rem;
+          font-weight: lighter;
+        }
+        span:nth-child(1):before{
+          content: "订";
+          display: inline-block;
+          background: #f5716e;
+          color: #fff;
+          font-size: .12rem;
+          padding: .02rem;
+          border-radius: .02rem;
+          line-height: 1;
+          margin-right: .1rem;
+        }
+        span:nth-child(2):before{
+          content: "团";
+          display: inline-block;
+          background: #06C1AE;
+          color: #fff;
+          font-size: .12rem;
+          padding: .02rem;
+          border-radius: .02rem;
+          line-height: 1;
+          margin-right: .1rem;
+          margin-top: .1rem;
+        }
       }
     }
   }
+
 
 </style>

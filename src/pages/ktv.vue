@@ -3,12 +3,12 @@
       <Header></Header>
       <Banner></Banner>
       <Location></Location>
-      <Reserve class="reserve"></Reserve>
-      <Group class="group"></Group>
-      <Evaluate class="evaluate"></Evaluate>
-      <Others class="others"></Others>
-      <Nearby class="nearby"></Nearby>
-      <Footer class="footer"></Footer>
+      <Reserve></Reserve>
+      <Group :items="data.groupItems"></Group>
+      <Evaluate :items="data.evaluateItems"></Evaluate>
+      <Others></Others>
+      <Nearby :items="data.nearbyItems"></Nearby>
+      <Footer></Footer>
     </div>
 </template>
 
@@ -22,39 +22,43 @@
     import Others from "../components/ktv/ktvOthers";
     import Nearby from "../components/ktv/ktvNearby";
     import Footer from "../components/ktv/ktvFooter";
+    import {Ktv} from "../apis/ktv";
     export default {
-        name: "ktv",
-        components:{
-          Header,
-          Banner,
-          Location,
-          Reserve,
-          Group,
-          Evaluate,
-          Others,
-          Nearby,
-          Footer
+      name: "ktv",
+      components:{
+        Header,
+        Banner,
+        Location,
+        Reserve,
+        Group,
+        Evaluate,
+        Others,
+        Nearby,
+        Footer
+      },
+      data(){
+        return{
+          data:{
+            groupItems:[],
+            evaluateItems:[],
+            nearbyItems:[]
+          }
         }
+      },
+      methods:{
+        cat(){
+          Ktv.getCat((data)=>{
+            this.data=data;
+            // console.log(this.data);
+          })
+        }
+      },
+      created(){
+        this.cat();
+      }
     }
 </script>
 
-<style lang="scss" scoped>
-  .reserve{
-    margin-top: .1rem;
-  }
-  .group{
-    margin-top: .1rem;
-  }
-  .evaluate{
-    margin-top: .1rem;
-  }
-  .others{
-    margin-top: .1rem;
-  }
-  .nearby{
-    margin-top: .1rem;
-  }
-  .footer{
-    margin-top: .1rem;
-  }
+<style scoped>
+
 </style>

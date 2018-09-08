@@ -2,10 +2,10 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <SwiperNav1 :data="data"></SwiperNav1>
+          <SwiperNav1 :items="data"></SwiperNav1>
         </div>
         <div class="swiper-slide">
-          <SwiperNav2 :data="data"></SwiperNav2>
+          <SwiperNav2 :items="data"></SwiperNav2>
         </div>
       </div>
       <!-- 如果需要分页器 -->
@@ -42,6 +42,7 @@
   .swiper-container{
     background: white;
     border-bottom: 1px solid #EAE7E1;
+    margin-bottom: .1rem;
   }
 </style>
 <style>

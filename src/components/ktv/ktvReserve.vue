@@ -26,6 +26,7 @@
     padding-left: .1rem;
     border-top: 1px solid #ECEAE5;
     border-bottom: 1px solid #ECEAE5;
+    margin-top: .1rem;
     .header{
       font-size: .18rem;
       display: flex;

@@ -1,7 +1,7 @@
 <template>
   <div class="intro">
     <div class="tit">猜你喜欢</div>
-    <IntroItem></IntroItem>
+    <IntroItem :items="data"></IntroItem>
     <div class="more">查看全部团购<span>></span></div>
   </div>
 </template>
@@ -12,6 +12,9 @@
     name: "indexIntro",
     components:{
       IntroItem
+    },
+    props:{
+      data:{}
     }
   }
 </script>
